@@ -1,0 +1,19 @@
+.carton{position:relative;width:100%;aspect-ratio:640/500;isolation:isolate;filter:drop-shadow(0 6px 5px #482c1610)}
+.carton>svg{display:block;width:100%;height:100%;overflow:visible}
+.carton--animated{perspective:1100px;--hinge-angle:calc(var(--close,0)*-180deg);--contents-settle:clamp(0,calc((var(--close,0) - .35)*4),1)}
+.carton--animated .carton-body{position:relative;z-index:1}
+.carton--animated .carton-contents{transform-box:view-box;transform-origin:50% 82%;transform:scaleY(calc(1 - var(--contents-settle)*.19))}
+.carton-hinge{position:absolute;top:14.8%;height:41.4%;transform-origin:50% 100%;transform-style:preserve-3d;transform:rotateX(var(--hinge-angle)) scaleY(calc(1 - var(--close,0)*.365));z-index:calc(clamp(0,calc((var(--close,0) - .5)*10000),1)*2);will-change:transform}
+.carton-hinge-face{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.carton-hinge-inside{transform:translateZ(.5px)}
+.carton-hinge-outside{transform:rotateX(180deg) translateZ(.5px)}
+.carton-hinge-edge{position:absolute;inset:0;border:2px solid #b49a71;border-radius:3% 3% 2% 2%;pointer-events:none}
+.carton-sticker{position:absolute;top:58%;left:24%;width:52%;height:23%;z-index:4;overflow:hidden;box-sizing:border-box;transform:perspective(600px) rotateX(14deg) rotate(-1deg);opacity:var(--seal,0);background:linear-gradient(155deg,transparent 0 58%,#477264 58% 65%,transparent 65%),linear-gradient(#f5f0d9 0 34%,#174b3c 34%);border-radius:3px;box-shadow:0 2px 3px #4b3f2a44;padding:2% 3%;color:#fff9e7;will-change:opacity}
+.carton-sticker-brand{display:block;color:#3d2b1f;font-family:Georgia,serif;font-size:clamp(11px,2.2vw,27px);line-height:1;font-weight:800;letter-spacing:-1px}
+.carton-sticker-copy{position:absolute;bottom:16%;left:6%;font-family:Arial,sans-serif;font-size:clamp(8px,1.3vw,17px);font-weight:800;line-height:.95;letter-spacing:-.4px}
+.carton-sticker-note{position:absolute;bottom:6%;left:6%;font-size:clamp(4px,.55vw,8px);letter-spacing:.3px}
+.carton-sticker-egg{position:absolute;width:20%;height:77%;right:21%;top:5%;border-radius:51% 49% 48% 50% / 64% 64% 36% 36%;background:radial-gradient(ellipse at 29% 26%,#fffefa,#e1dfcf 70%,#bdbba8);transform:rotate(23deg);box-shadow:5px 5px 4px #20392a3d}
+.carton--brown .carton-sticker-egg{background:radial-gradient(ellipse at 29% 26%,#dec29a,#b68b58 70%,#87613f)}
+.carton-sticker-count{position:absolute;right:3%;bottom:10%;width:24%;font-family:Georgia,serif;font-size:clamp(10px,2vw,27px);font-weight:700;line-height:1;text-align:center;color:#fff9e7}
+.carton-sticker-count small{display:block;font-family:Arial,sans-serif;font-size:clamp(3px,.45vw,6px);font-weight:400;letter-spacing:.3px;line-height:1.6}
+@media(prefers-reduced-motion:reduce){.carton-hinge,.carton-sticker{will-change:auto}}

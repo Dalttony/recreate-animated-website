@@ -1,0 +1,12 @@
+{
+  "name": "huevos-co-reference-recreation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Recreación local e interactiva de Huevos Co. basada en el video de referencia.",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check app.js && node --check carton.js && node --check server.mjs"
+  }
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2e5">
+  <meta name="description" content="Buenos huevos. Mejores mañanas. Un concepto interactivo de Huevos Co. inspirado en el video de referencia.">
+  <title>Huevos Co. — Buenos huevos. Mejores mañanas.</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="preload" as="font" type="font/ttf" href="./assets/baloo-800.ttf" crossorigin>
+  <link rel="preload" as="image" href="./assets/hen.webp">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./carton.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#shop">Ir a los huevos</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Inicio de Huevos Co.">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Huevos Co.</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#eggs">Huevos</a><a href="#shop">Tienda</a><a href="#farm">La granja</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-button" aria-label="Abrir cesta" data-open-cart hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 8h18l-2 12H5L3 8Z M8 8l4-6 4 6"/></svg><span data-cart-count>0</span></button>
+      <a class="button button-dark" href="#shop">Pedir huevos <span class="button-arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero paper" id="home" aria-labelledby="hero-title">
+      <div class="hero-inner section-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Buenos <span class="highlight">huevos.</span><br>Mejores<br><span class="highlight">mañanas.</span></h1>
+          <p>Huevos frescos, marrones y blancos, de nuestra granja a tu sartén.</p>
+          <a class="button button-yellow" href="#eggs">Conoce los huevos <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" aria-label="Una gallina amarilla con un huevo marrón y uno blanco">
+          <div class="hen-shadow"></div>
+          <img class="hen" src="./assets/hen.webp" alt="" width="1254" height="1254" fetchpriority="high">
+          <span class="hen-speech scribble">¡Clo, clo!</span>
+          <span class="sparkle sparkle-one" aria-hidden="true">✦</span><span class="sparkle sparkle-two" aria-hidden="true">✦</span>
+          <div class="hero-dock egg-dock" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="little-tracks" aria-hidden="true">⤨ ⤨ ⤨ ⤨</div>
+      <a class="scroll-hint scribble" href="#eggs">lo bueno está por aquí <span>↓</span></a>
+    </section>
+
+    <section class="egg-section torn-top torn-bottom" id="eggs" aria-labelledby="egg-title">
+      <div class="section-heading reveal">
+        <span class="scribble section-note">conoce los huevos</span>
+        <h2 id="egg-title">Dos cáscaras. <span class="underline-cream">La misma calidad.</span></h2>
+        <p>El color de la cáscara depende de la raza de la gallina. Lo bueno está adentro.</p>
+      </div>
+      <div class="egg-comparison">
+        <div class="egg-notes notes-brown">
+          <div class="egg-note reveal"><span class="scribble">Un marrón cálido</span><p>Ese color depende<br>de la raza. Los ponen<br>nuestras gallinas marrones.</p><i aria-hidden="true"></i></div>
+          <div class="egg-note reveal"><span class="scribble">Pecas naturales</span><p>Pequeñas pintas naturales.<br>Cada huevo tiene<br>su propia personalidad.</p><i aria-hidden="true"></i></div>
+          <div class="egg-note reveal"><span class="scribble">Una yema dorada</span><p>Dorada y lista<br>para empezar el día<br>como más te gusta.</p><i aria-hidden="true"></i></div>
+        </div>
+        <div class="comparison-center">
+          <div class="comparison-dock egg-dock" aria-hidden="true"></div>
+          <span class="egg-ampersand" aria-hidden="true">&amp;</span>
+          <div class="egg-labels"><div class="egg-label"><strong>El marrón</strong><span class="scribble">de nuestras gallinas marrones</span></div><div class="egg-label"><strong>El blanco</strong><span class="scribble">de nuestras gallinas blancas</span></div></div>
+        </div>
+        <div class="egg-notes notes-white">
+          <div class="egg-note reveal"><span class="scribble">El blanco de siempre</span><p>Claro, brillante y clásico.<br>El huevo de toda la vida.</p><i aria-hidden="true"></i></div>
+          <div class="egg-note reveal"><span class="scribble">Suave y liso</span><p>Ideal para hornear<br>y perfecto para<br>dejar volar tu creatividad.</p><i aria-hidden="true"></i></div>
+          <div class="egg-note reveal"><span class="scribble">Igual de bueno</span><p>Marrón o blanco, la nutrición<br>en su interior es la misma.</p><i aria-hidden="true"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-section paper" id="shop" aria-labelledby="shop-title">
+      <div class="section-heading reveal">
+        <span class="scribble section-note">recién elegidos</span>
+        <h2 id="shop-title">Elige tu <span class="highlight">empaque.</span></h2>
+        <p>Marrones o blancos, en cajas de 6, 10 o 12. Frescos de nuestra granja.</p>
+      </div>
+      <div class="variant-switch" role="group" aria-label="Color de los huevos">
+        <button class="active" data-color="brown" aria-pressed="true"><span class="mini-egg brown"></span>Marrones</button>
+        <button data-color="white" aria-pressed="false"><span class="mini-egg white"></span>Blancos</button>
+      </div>
+      <p class="switch-note scribble">psst... elige un color <span aria-hidden="true">↗</span></p>
+      <div class="products section-inner" id="products" aria-live="polite"></div>
+    </section>
+
+    <section class="packaging-section torn-top torn-bottom" id="packaging" aria-labelledby="packaging-title">
+      <div class="packaging-sticky section-inner">
+        <div class="packaging-copy">
+          <span class="scribble section-note">lo que vas a recibir</span>
+          <h2 id="packaging-title">Tus huevos,<br><span class="yellow-text">empacados</span> con cuidado.</h2>
+          <p>Cada pedido va en una caja de pulpa moldeada, sellada con nuestra etiqueta. Así llega hasta tu puerta.</p>
+          <div class="pack-variant" role="group" aria-label="Color de los huevos en el empaque"><button class="active" data-pack-color="brown" aria-pressed="true"><span class="mini-egg brown"></span>Marrones</button><button data-pack-color="white" aria-pressed="false"><span class="mini-egg white"></span>Blancos</button></div>
+          <ol class="pack-steps">
+            <li class="active"><button data-pack-step="0" aria-current="step"><span>1</span><div><strong>Diez buenos huevos</strong><p>Tus huevos elegidos, cada uno bien acomodado en su lugar.</p></div></button></li>
+            <li><button data-pack-step="1"><span>2</span><div><strong>Bien protegidos</strong><p>La pulpa moldeada protege cada huevo en el camino a tu puerta.</p></div></button></li>
+            <li><button data-pack-step="2"><span>3</span><div><strong>Nuestra etiqueta al final</strong><p>Cada caja lleva nuestra etiqueta para que reconozcas su origen.</p></div></button></li>
+          </ol>
+        </div>
+        <div class="packaging-art"><div id="packaging-carton"></div><span class="sticker-note scribble">nuestra etiqueta<svg viewBox="0 0 140 80" aria-hidden="true"><path d="M130 8Q35-10 22 66m0 0-6-19m6 19 16-11"/></svg></span></div>
+      </div>
+    </section>
+
+    <section class="farm-section" id="farm" aria-labelledby="farm-title">
+      <div class="section-heading reveal"><span class="scribble section-note">nuestra granja</span><h2 id="farm-title">Conoce la <span class="underline-cream">granja</span><br>detrás de tus huevos.</h2><p>Un vistazo al lugar donde viven nuestras gallinas y empieza cada huevo.</p></div>
+      <div class="farm-gallery"><button class="farm-photo photo-left" data-tour-start="0" aria-label="Ver el exterior de la granja"><img src="./assets/farm-exterior.webp" alt="Imagen ilustrativa de una granja avícola con techo metálico y campos verdes alrededor" loading="lazy" width="1536" height="1024"><span class="photo-caption scribble">un lugar para crecer</span></button><button class="farm-photo photo-right" data-tour-start="1" aria-label="Ver el interior del galpón"><img src="./assets/farm-interior.webp" alt="Imagen ilustrativa de un galpón iluminado por el sol, con gallinas y un pasillo central" loading="lazy" width="1536" height="1024"><span class="photo-caption scribble">donde empieza cada mañana</span></button></div>
+      <button class="button button-dark tour-button" data-tour-start="0"><span class="play-icon" aria-hidden="true">▶</span>Recorre la granja</button>
+    </section>
+  </main>
+
+  <div class="travel-eggs" aria-hidden="true"><div class="egg-jump egg-jump-brown"><div class="egg egg-brown"></div></div><div class="egg-jump egg-jump-white"><div class="egg egg-white"></div></div></div>
+
+  <footer class="site-footer paper torn-top">
+    <div class="footer-main section-inner"><div class="footer-brand"><a class="brand" href="#home" aria-label="Volver al inicio de Huevos Co."><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Huevos Co.</span></a><span class="scribble footer-tagline">Buenos huevos. Mejores mañanas.</span><p>Huevos frescos, marrones y blancos, de nuestra propia granja.</p><div class="social-links"><button data-social="Instagram" aria-label="Acerca de Instagram">◎</button><button data-social="Facebook" aria-label="Acerca de Facebook">f</button><button data-social="YouTube" aria-label="Acerca de YouTube">▷</button></div></div><div class="footer-column"><h3>Tienda</h3><a href="#shop" data-shop-color="brown">Huevos marrones</a><a href="#shop" data-shop-color="white">Huevos blancos</a><a href="#shop">Empaques de 6, 10 y 12</a></div><div class="footer-column"><h3>Explora</h3><a href="#eggs">Conoce los huevos</a><a href="#farm">La granja</a><a href="#home">Volver arriba ↑</a></div><div class="footer-column"><h3>Hablemos</h3><button class="text-link" data-contact>hola@huevosco.example</button><span>Las buenas mañanas empiezan aquí.</span><a class="button button-yellow" href="#shop">Pedir huevos <span aria-hidden="true">↗</span></a></div></div>
+    <div class="footer-bottom"><span>© 2026 Huevos Co. · Recreación de diseño interactivo</span><button class="scribble" data-about>de nuestra granja, con cariño ♡</button></div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <dialog class="basket-dialog" id="basket-dialog" aria-labelledby="basket-title"><div class="dialog-header"><span class="scribble">una caja llena de cosas buenas</span><button class="icon-button" data-close-dialog aria-label="Cerrar cesta">×</button></div><h2 id="basket-title">Tu <span class="highlight">cesta.</span></h2><div class="basket-content"></div><div class="basket-summary" aria-live="polite" aria-atomic="true"></div><p class="demo-note">Demostración de diseño: no se realizan pagos ni pedidos reales.</p></dialog>
+  <dialog class="tour-dialog" id="tour-dialog" aria-labelledby="tour-title"><div class="dialog-header"><span class="scribble">bienvenido a nuestra granja</span><button class="icon-button" data-close-dialog aria-label="Cerrar recorrido de la granja">×</button></div><h2 id="tour-title">La granja detrás de tus huevos.</h2><img class="tour-image" src="./assets/farm-exterior.webp" alt=""><div class="tour-controls"><button class="button button-dark" data-tour-prev aria-label="Vista anterior de la granja">←</button><div aria-live="polite" aria-atomic="true"><strong class="tour-caption"></strong><p class="tour-counter"></p></div><button class="button button-dark" data-tour-next aria-label="Vista siguiente de la granja">→</button></div><p class="demo-note">Recorrido ilustrativo de la granja · imágenes recreadas para este concepto de diseño.</p></dialog>
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="info-title"><div class="dialog-header"><span class="scribble">una pequeña nota</span><button class="icon-button" data-close-dialog aria-label="Cerrar información">×</button></div><h2 id="info-title">Para empezar bien la mañana.</h2><p class="info-copy"></p><button class="button button-yellow" data-close-dialog>Listo, entendido <span aria-hidden="true">✓</span></button></dialog>
+  <noscript><p class="noscript-note">Activa JavaScript para explorar los huevos animados, los empaques y la cesta.</p></noscript>
+</body>
+</html>
